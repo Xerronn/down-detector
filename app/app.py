@@ -28,7 +28,7 @@ while(True):
             .format(site, website_status.status_code, website_status.reason))
         
         #SLACK MESSAGE
-        if (int(website_status.status_code) != 000):
+        if (int(website_status.status_code) == 000):
             for user in users:
                 message = f"*IMMEDIATE ACTION REQUIRED*\n {site} is not responding!!"
                 url = baseURL + user + "&token=" + token + "&text=" + message + "&pretty=1"
